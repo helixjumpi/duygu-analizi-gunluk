@@ -1,43 +1,83 @@
-# Duygu Analizi Günlük Uygulaması
+# Emotion Analysis Diary App
 
-Bu proje, kullanıcıların günlüklerini yazabileceği ve yazılarından duygu durumlarını analiz ederek moral desteği sunan bir web uygulamasıdır.
+A web application that allows users to write diary entries and analyzes their emotional state using AI-powered sentiment analysis.
 
-## Kullanılan Teknolojiler
+## Features
 
-* **Frontend:** React.js, Tailwind CSS
-* **Backend:** Node.js, Express.js
-* **Veritabanı:** MongoDB
-* **Duygu Analizi:** TextBlob (Python)
+- User authentication and authorization
+- Diary entry creation and management
+- Real-time emotion analysis using TextBlob
+- Emotional state visualization
+- Personalized motivational content
 
-## Proje Adımları
+## Tech Stack
 
-1.  **Planlama ve Tasarım:**
-    * Kullanıcı hikayeleri oluşturma
-    * Veritabanı şemasını detaylandırma
-    * UI/UX tasarımı
-2.  **Backend Geliştirme:**
-    * Node.js ve Express.js ile API oluşturma
-    * MongoDB bağlantısı kurma
-    * Kullanıcı kayıt ve giriş işlemleri
-    * Günlük işlemleri (ekleme, düzenleme, silme)
-3.  **Duygu Analizi Entegrasyonu:**
-    * Python ve TextBlob kurulumu
-    * API üzerinden duygu analizi
-    * Veritabanına sonuçları kaydetme
-4.  **Frontend Geliştirme:**
-    * React bileşenlerini oluşturma
-    * API'ye bağlanma
-    * Arayüz tasarımı (Tailwind CSS)
-5.  **Test ve Yayınlama:**
-    * Unit ve entegrasyon testleri
-    * Hata ayıklama ve optimizasyon
-    * Uygulamayı yayınlama
+- Frontend: React.js with Tailwind CSS
+- Backend: Node.js with Express.js
+- Database: MongoDB
+- Emotion Analysis: Python with TextBlob
+- Authentication: JWT
 
-## İlk Adım
+## Project Structure
 
-* Veritabanı şemasını detaylandırma.
-* Kullanıcı hikayelerini daha da açma.
+```
+diary-app/
+├── client/          # React frontend
+├── server/          # Node.js backend
+└── python-service/  # Python emotion analysis service
+```
 
-## İletişim
+## Getting Started
 
-* [Slack Çalışma Alanı](https://join.slack.com/t/duyguanalizig-kaq7904/shared_invite/zt-3230bn5ur-8Bt0~1HnGx1nq_V~3kNOfA)
+### Prerequisites
+
+- Node.js (v14 or higher)
+- Python (v3.8 or higher)
+- MongoDB
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies for each service:
+
+   ```bash
+   # Frontend
+   cd client
+   npm install
+
+   # Backend
+   cd server
+   npm install
+
+   # Python Service
+   cd python-service
+   pip install -r requirements.txt
+   ```
+
+3. Set up environment variables (see .env.example files in each directory)
+
+4. Start the services:
+
+   ```bash
+   # Start MongoDB
+   mongod
+
+   # Start Backend
+   cd server
+   npm run dev
+
+   # Start Python Service
+   cd python-service
+   pip install -r requirements.txt
+   python app.py
+
+   # Start Frontend
+   cd client
+   npm install
+   npm run dev
+   ```
+
+## License
+
+MIT
